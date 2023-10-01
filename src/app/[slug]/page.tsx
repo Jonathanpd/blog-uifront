@@ -7,8 +7,6 @@ export default async function Page({
     params: { slug: string }
   }) {
     const { post } = await getItem(slug)
-    //console.log(post.title);
-    console.log(post);
 
     return (
         <>
@@ -20,15 +18,6 @@ export default async function Page({
         </>
     )
   }
-
-/* export default function Page({ params }: { params: { slug: string, title: string } }) {
-    return (
-        <>
-            <div>My Post: {params.slug}</div>
-            <div>Info: {params.title}</div>
-        </>
-    )
-} */
 
 type Posts = {
     slug: string;
