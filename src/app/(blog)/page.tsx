@@ -15,8 +15,6 @@ type Posts = {
 export default async function Home() {
   const items = await getItems();
 
-  console.log(items)
-
   return (
     <main className="flex justify-center">
       <div className="grid sm:grid-cols-2 md:grid-cols-3 min-h-screen max-w-[1400px] flex-col items-center justify-center gap-8 p-4">
