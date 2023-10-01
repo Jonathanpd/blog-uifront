@@ -19,16 +19,14 @@ export default async function Page({
   )
 }
 
-type Posts = {
+type PostsInfo = {
   slug: string;
-  title: string;
 }
 
 export async function generateStaticParams() {
   const posts = await fetch(`${baseApiUrl}/article`).then((res) => res.json())
   
-  return posts.map((post: Posts) => ({
-      slug: String(post.slug),
-      title: post.title,
+  return posts.map((post: PostsInfo) => ({
+    slug: String(post.slug),
   }))
 }
