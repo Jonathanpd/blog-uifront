@@ -1,4 +1,4 @@
-import { getItems } from '@/utils/get-items'
+import { getItems } from '@/services/get-items'
 import Link from 'next/link';
 
 type Posts = {

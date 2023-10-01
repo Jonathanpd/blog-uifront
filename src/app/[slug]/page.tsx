@@ -1,4 +1,4 @@
-import { getItem } from '@/utils/get-items'
+import { getItem } from '@/services/get-items'
 import Link from 'next/link'
 
 export default async function Page({
