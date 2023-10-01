@@ -9,11 +9,13 @@ type Posts = {
   slug: string;
   title: string;
   date: string;
-  content: string;
+  content: HTMLElement;
 }
 
 export default async function Home() {
   const items = await getItems();
+
+  console.log(items)
 
   return (
     <main className="flex justify-center">
@@ -24,12 +26,10 @@ export default async function Home() {
               <CardHeader>
                 <Link href={`/${post.slug}`}>
                   <CardTitle>{post.title}</CardTitle>
-                  <CardDescription>{post.slug}</CardDescription>
+                  <CardDescription>{post.date}</CardDescription>
                 </Link>
               </CardHeader>
-              <CardContent>
-                <p>{post.slug}</p>
-              </CardContent>
+              <CardContent dangerouslySetInnerHTML={{ __html: post.content }} />
               <CardFooter>
                 <Button variant="ghost" asChild>
                   <Link href={`/${post.slug}`}>
