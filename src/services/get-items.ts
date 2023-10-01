@@ -1,7 +1,8 @@
 import { cache } from 'react'
 
 const revalidateNumber = 60 // Revalidate every 60 seconds
-const baseApiUrl = process.env.BASE_API_URL;
+
+export const baseApiUrl = process.env.BASE_API_URL;
 
 export const getItems = cache(async () => { // Feed Posts
   const items = await fetch(`${baseApiUrl}/article/`, {
