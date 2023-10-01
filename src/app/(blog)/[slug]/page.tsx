@@ -9,11 +9,13 @@ export default async function Page({
   const { post } = await getItem(slug)
 
   return (
-    <>
-      <HeaderSinglePost />
-      <div>My Post: {post.slug}</div>
-      <div className='mb-4'>Info: {post.title}</div>
-    </>
+    <article className="flex justify-center">
+      <div className="flex flex-col min-h-screen w-[100%] max-w-[1400px] gap-8 p-4">
+        <HeaderSinglePost />
+        <div>My Post: {post.slug}</div>
+        <div className='mb-4'>Info: {post.title}</div>
+      </div>
+    </article>
   )
 }
 
