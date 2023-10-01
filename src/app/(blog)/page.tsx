@@ -19,7 +19,7 @@ export default async function Home() {
     <main className="flex justify-center">
       <div className="grid sm:grid-cols-2 md:grid-cols-3 min-h-screen max-w-[1400px] flex-col items-center justify-center gap-8 p-4">
         {items.map((post: Posts) => (
-          <article key={post.slug}>
+          <article key={post.id}>
             <Card className="flex flex-col w-[100%] max-w-[400px] lg:min-w-[300px]">
               <CardHeader>
                 <Link href={`/${post.slug}`}>
