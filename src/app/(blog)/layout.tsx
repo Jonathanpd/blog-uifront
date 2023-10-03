@@ -1,5 +1,7 @@
+import Footer from '@/components/Footer'
 import './../globals.css'
 import type { Metadata } from 'next'
+import Header from '@/components/Header'
 
 //import { Inter } from 'next/font/google'
 //const inter = Inter({ subsets: ['latin'] })
@@ -16,9 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-no-repeat p-4">
-        {/* Feed Post Layout */}
+      <body className="bg-no-repeat">
+        <Header />
+
         {children}
+
+        <Footer />
       </body>
     </html>
   )

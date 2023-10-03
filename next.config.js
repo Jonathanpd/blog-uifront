@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    images: {
+        domains: ['apiuifront.local','api.uifront.com','flowbite.com'],
+    },
+}
 
 module.exports = nextConfig
