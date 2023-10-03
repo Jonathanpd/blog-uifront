@@ -21,7 +21,7 @@ export default async function Page({
             height={400}
           />
 
-          <div className="flex lg:flex-col gap-4 justify-between items-start pt-4">
+          <div className="flex flex-col gap-4 justify-between items-start pt-4">
             <NavSinglePost />
             <div>
               <span>Data: {post.date}</span>
