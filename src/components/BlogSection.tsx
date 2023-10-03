@@ -11,7 +11,8 @@ type Posts = {
     title: string;
     date: string;
     src: string;
-    content: HTMLElement;
+    //content: HTMLElement;
+    content: React.ReactNode;
 }
 
 function getSrc(url: string) {
@@ -69,7 +70,14 @@ export async function BlogGrid({ maxPost }: BlogGridProps) {
                                 </span>
                             </CardDescription>
                             
-                            <div className="max-h-11 overflow-hidden mb-3 font-normal text-gray-700 dark:text-gray-400" dangerouslySetInnerHTML={{ __html: post.content }} />
+                            {/* <div 
+                                className="max-h-11 overflow-hidden mb-3 font-normal text-gray-700 dark:text-gray-400" 
+                                dangerouslySetInnerHTML={{ __html: post.content }}
+                            /> */}
+
+                            <div className="max-h-11 overflow-hidden mb-3 font-normal text-gray-700 dark:text-gray-400" >
+                                {post.content}
+                            </div>
                         </CardContent>
                     </Link>
                     <CardFooter>
