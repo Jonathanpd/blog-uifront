@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 const navigation = [
-    { name: 'Blog', href: '#' },
-    { name: 'Newslatter', href: '#' },
+    { name: 'Home', href: '/' },
+    { name: 'Blog', href: '/artigos' },
     { name: 'Tutorias', href: '#' },
     { name: 'Sobre mim', href: '#' },
 ]

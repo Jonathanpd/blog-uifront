@@ -18,6 +18,75 @@ function getSrc(url: string) {
     return url || 'https://flowbite.com/docs/images/blog/image-1.jpg'
 }
 
+type BlogGridProps = {
+    maxPost: number;
+};
+
+export async function BlogGrid({ maxPost }: BlogGridProps) {
+    const items = await getItems();
+
+    return (
+        <div className="blog-grid grid sm:grid-cols-2 md:grid-cols-3 min-h-screen max-w-[1400px] flex-col items-center justify-center gap-8 p-4 z-10">
+
+        <div className="mx-auto lg:mx-0 max-w-sm">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Nossos Artigos</h2>
+            <p className="mt-2 text-lg leading-8 text-gray-600">
+                {/* Aprenda como expandir seus projetos com nossos conselhos especializados */}
+                Confira o que há de mais recente sobre elementos de interface, UX / UI Design e desenvolvimento Front-end.
+            </p>
+
+            <Button variant='ghost' className="font-semibold shadow-sm hover:bg-indigo-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-6" asChild>
+                <Link href={`/artigos`}>
+                Ver Todos <ChevronRightIcon className="h-4 w-4" />
+                </Link>
+            </Button>
+        </div>
+
+        {items.map((post: Posts, index: number) => (
+            <article key={post.id} className={(maxPost > 0 && index >= maxPost) ? 'hidden' : ''}>
+                <Card className="h-[432px] flex flex-col justify-between max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-0">
+                    <Link className="" href={`/${post.slug}`}>
+                        <CardHeader className="p-0">
+                        <Image
+                            className="rounded-t-lg max-h-52"
+                            src={getSrc(post.src)}
+                            alt={post.title}
+                            width={500}
+                            height={240}
+                        />
+                        </CardHeader>
+                        <CardContent className="py-4">
+                            <CardTitle className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                {post.title}
+                            </CardTitle>
+
+                            <CardDescription className="flex items-center gap-x-4 text-xs">
+                                <time dateTime={post.date} className="text-gray-500">
+                                    {post.date}
+                                </time>
+                                <span className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                                    Front-end
+                                </span>
+                            </CardDescription>
+                            
+                            <div className="max-h-11 overflow-hidden mb-3 font-normal text-gray-700 dark:text-gray-400" dangerouslySetInnerHTML={{ __html: post.content }} />
+                        </CardContent>
+                    </Link>
+                    <CardFooter>
+                        <Button className="bg-indigo-600 font-semibold shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" asChild>
+                        <Link href={`/${post.slug}`}>
+                            Ver Post <ChevronRightIcon className="h-4 w-4" />
+                        </Link>
+                        </Button>
+                    </CardFooter>
+                </Card>
+            </article> 
+        ))}
+        </div>
+    )
+}
+
+/*
 const posts = [
     {
       id: 1,
@@ -55,7 +124,7 @@ const posts = [
     },
 ]
 
-export default function BlogSection() {
+export function BlogSection() {
     return (
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 border-t pt-10 sm:mt-16 sm:pt-16">
@@ -122,7 +191,7 @@ export function BlogCard() {
                 <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     Read more
                     <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                     </svg>
                 </a>
             </div>
@@ -152,7 +221,7 @@ export function BlogTips() {
                         <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                             Read more
                             <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                             </svg>
                         </a>
                     </div>
@@ -160,68 +229,4 @@ export function BlogTips() {
             </div>
         </div>
     )
-}
-
-export async function BlogGrid() {
-    const items = await getItems();
-
-    return (
-        <div className="blog-grid grid sm:grid-cols-2 md:grid-cols-3 min-h-screen max-w-[1400px] flex-col items-center justify-center gap-8 p-4 z-10">
-
-        <div className="mx-auto max-w-2xl lg:mx-0 max-w-sm">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Nossos Artigos</h2>
-            <p className="mt-2 text-lg leading-8 text-gray-600">
-                {/* Aprenda como expandir seus projetos com nossos conselhos especializados */}
-                Confira o que há de mais recente sobre elementos de interface, UX / UI Design e desenvolvimento Front-end.
-            </p>
-
-            <Button variant='ghost' className="font-semibold shadow-sm hover:bg-indigo-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-6" asChild>
-                <Link href={`/artigos`}>
-                Ver Todos <ChevronRightIcon className="h-4 w-4" />
-                </Link>
-            </Button>
-        </div>
-
-        {items.map((post: Posts) => (
-        <article key={post.id}>
-            <Card className="h-[432px] flex flex-col justify-between max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-0">
-            <Link className="" href={`/${post.slug}`}>
-                <CardHeader className="p-0">
-                <Image
-                    className="rounded-t-lg max-h-52"
-                    src={getSrc(post.src)}
-                    alt={post.title}
-                    width={500}
-                    height={240}
-                />
-                </CardHeader>
-                <CardContent className="py-4">
-                <CardTitle className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    {post.title}
-                </CardTitle>
-
-                <CardDescription className="flex items-center gap-x-4 text-xs">
-                    <time dateTime={post.date} className="text-gray-500">
-                        {post.date}
-                    </time>
-                    <span className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
-                        Front-end
-                    </span>
-                </CardDescription>
-                
-                <div className="mb-3 font-normal text-gray-700 dark:text-gray-400" dangerouslySetInnerHTML={{ __html: post.content }} />
-                </CardContent>
-            </Link>
-            <CardFooter>
-                <Button className="bg-indigo-600 font-semibold shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" asChild>
-                <Link href={`/${post.slug}`}>
-                    Ver Post <ChevronRightIcon className="h-4 w-4" />
-                </Link>
-                </Button>
-            </CardFooter>
-            </Card>
-        </article>
-        ))}
-        </div>
-    )
-}    
+} */
