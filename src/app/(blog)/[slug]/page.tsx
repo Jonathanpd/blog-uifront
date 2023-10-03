@@ -15,7 +15,7 @@ export default async function Page({
         <div className="max-w-2xl mx-auto w-full">
           <Image 
             src={post.src}
-            className="bg-indigo-500 bg-cover h-64 text-center overflow-hidden"
+            className="bg-indigo-500 bg-cover h-64 text-center overflow-hidden rounded-md"
             alt="Imagem do Post"
             width={1000}
             height={400}
