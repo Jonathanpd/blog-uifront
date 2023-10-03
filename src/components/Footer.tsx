@@ -51,7 +51,7 @@ export default function Footer() {
                 </a>
             </div>
             <p className="mt-8 text-center text-base text-gray-400">
-                &copy; 2020 UI & Front. Todos os direitos reservados.
+                By Jonas | &copy; 2023 UI&Front. Todos os direitos reservados.
             </p>
             </div>
         </footer>

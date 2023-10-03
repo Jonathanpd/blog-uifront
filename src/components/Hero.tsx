@@ -31,7 +31,7 @@ export default function Hero() {
                     Bem-vindo ao Blog<br />Ui & Front
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                    Explore nossos artigos sobre elementos de interface, desde o UX até o desenvolvimento Front-end, para o sucesso do seu projeto.
+                    Explore nossos artigos sobre elementos de interface, desde o UX / Ui Design até o desenvolvimento Front-end, para o sucesso do seu projeto.
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                     <Link
