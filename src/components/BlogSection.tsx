@@ -48,7 +48,7 @@ export async function BlogGrid({ maxPost }: BlogGridProps) {
                     <Link className="" href={`/${post.slug}`}>
                         <CardHeader className="p-0">
                         <Image
-                            className="rounded-t-lg max-h-52"
+                            className="rounded-t-lg h-52"
                             src={getSrc(post.src)}
                             alt={post.title}
                             width={500}
