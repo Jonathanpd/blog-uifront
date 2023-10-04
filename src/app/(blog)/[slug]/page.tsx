@@ -12,11 +12,11 @@ export default async function Page({
 
   return (
     <article className="flex justify-center mt-16 lg:px-8 max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
-      <div className="flex flex-col min-h-screen w-[100%] max-w-[1400px] gap-8 p-4">
+      <div className="flex flex-col min-h-screen w-[100%] max-w-[1400px] gap-8">
         <div className="max-w-2xl mx-auto w-full">
           <Image 
-            src={post.src}
-            className="bg-indigo-500 bg-cover h-64 text-center overflow-hidden rounded-md"
+            src={getSrc(post.src)}
+            className="bg-indigo-500 bg-cover h-64 text-center overflow-hidden rounded-md object-cover"
             alt="Imagem do Post"
             width={1000}
             height={400}
