@@ -1,6 +1,7 @@
 import { baseApiUrl, getItem } from '@/services/get-items'
 import NavSinglePost from './_components/NavSinglePost'
 import Image from 'next/image'
+import { getSrc } from '@/utils/getSrc'
 
 export default async function Page({
   params: { slug },
