@@ -25,13 +25,16 @@
         }
     },
     "rules": {
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
         "react/no-unknown-property": [
             "error",
             {
               "ignore": ["jsx"]
             }
-          ]
+        ]
     }
 }
