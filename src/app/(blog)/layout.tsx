@@ -8,11 +8,11 @@ import Header from '@/components/Header'
 
 export const metadata: Metadata = {
   title: 'Blog UI Front',
-  description: 'Blog UI Front next app',
+  description: 'Blog UI Front next app'
 }
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {

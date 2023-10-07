@@ -6,15 +6,11 @@ import Link from 'next/link'
 
 export default function NavSinglePost() {
   const router = useRouter()
- 
+
   return (
-    <div className='flex gap-4 items-center'>
-      <Button onClick={() => router.back()}>
-        Voltar
-      </Button>
-      <Link href={'/'}>
-        Ir para Home
-      </Link>
+    <div className="flex gap-4 items-center">
+      <Button onClick={() => router.back()}>Voltar</Button>
+      <Link href={'/'}>Ir para Home</Link>
     </div>
   )
 }
