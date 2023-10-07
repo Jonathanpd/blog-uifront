@@ -19,13 +19,15 @@ type Posts = {
 
 type BlogGridProps = {
     maxPost: number;
+    className?: string;
 };
 
-export async function BlogGrid({ maxPost }: BlogGridProps) {
+export async function BlogGrid({ className, maxPost }: BlogGridProps) {
+    const combinedClassName = `blog-grid grid sm:grid-cols-2 lg:grid-cols-3 min-h-screen max-w-[1400px] flex-col items-center justify-center gap-8 p-4 z-10 ${className}`;
     const items = await getItems();
 
     return (
-        <div className="blog-grid grid sm:grid-cols-2 lg:grid-cols-3 min-h-screen max-w-[1400px] flex-col items-center justify-center gap-8 p-4 z-10">
+        <div className={combinedClassName}>
             <div className="mx-auto lg:mx-0 max-w-sm">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Nossos Artigos</h2>
                 <p className="mt-2 text-lg leading-8 text-gray-600">
@@ -43,7 +45,7 @@ export async function BlogGrid({ maxPost }: BlogGridProps) {
             {items.map((post: Posts, index: number) => (
                 <article key={post.id} className={(maxPost > 0 && index >= maxPost) ? 'hidden' : ''}>
                     <Card className="h-[432px] flex flex-col justify-between max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-0">
-                        <Link className="" href={`/${post.slug}`}>
+                        <Link href={`/${post.slug}`}>
                             <CardHeader className="p-0">
                             <Image
                                 className="rounded-t-lg h-52 object-cover"
