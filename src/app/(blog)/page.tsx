@@ -1,4 +1,4 @@
-import Hero from '@/components/Sections/Hero/Hero'
+import Hero from '@/components/Sections/Hero'
 import { BlogGrid } from '@/components/Sections/BlogSection/BlogSection'
 
 export default async function Home() {
