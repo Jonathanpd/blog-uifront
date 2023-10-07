@@ -1,5 +1,5 @@
-import Hero from '@/components/Hero'
-import { BlogGrid } from '@/components/BlogSection'
+import Hero from '@/components/Sections/Hero/Hero'
+import { BlogGrid } from '@/components/Sections/BlogSection/BlogSection'
 
 export default async function Home() {
   return (

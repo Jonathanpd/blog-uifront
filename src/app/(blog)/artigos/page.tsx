@@ -1,4 +1,4 @@
-import { BlogGrid } from '@/components/BlogSection'
+import { BlogGrid } from '@/components/Sections/BlogSection/BlogSection'
 
 export default async function Artigos() {
   return (
