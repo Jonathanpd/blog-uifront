@@ -1,7 +1,12 @@
+type FooterProps = {
+    className?: string;
+}
 
-export default function Footer() {
+export default function Footer({className}: FooterProps) {
+    const combinedClassName = `bg-gray-900 mt-20 ${className}`;
+
     return (
-        <footer className="bg-gray-900 mt-20">
+        <footer className={combinedClassName}>
             <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
             <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
                 <div className="px-5 py-2">

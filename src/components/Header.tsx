@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import Link from 'next/link'
-import { useState } from 'react'
 
 const navigation = [
     { name: 'Home', href: '/' },
@@ -11,19 +10,25 @@ const navigation = [
     { name: 'Sobre mim', href: '#' },
 ]
 
-export default function Header() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+type HeaderProps = {
+    className?: string;
+}
+
+export default function Header({className}: HeaderProps) {
+    const combinedClassName = `absolute inset-x-0 top-0 z-50 max-w-[1400px] mx-auto px-4 ${className}`;
 
     return (
-        <header className="absolute inset-x-0 top-0 z-50 max-w-[1400px] mx-auto px-4">
+        <header className={combinedClassName}>
             <nav className="flex items-center justify-between px-4 py-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">Blog: UI & Front</span>
                         <Image
                             className="h-8 w-auto"
-                            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                            src="https://tailwindui.com/img/logos/mark.svg"
                             alt=""
+                            width={120}
+                            height={120}
                         />
                     </Link>
                 </div>
@@ -31,7 +36,6 @@ export default function Header() {
                     <button
                         type="button"
                         className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-                        onClick={() => setMobileMenuOpen(true)}
                     >
                         <span className="sr-only">Abrir Menu</span>
                     </button>
