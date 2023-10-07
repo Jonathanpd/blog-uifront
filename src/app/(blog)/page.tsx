@@ -1,8 +1,7 @@
-import Hero from "@/components/Hero";
-import { BlogGrid } from "@/components/BlogSection";
+import Hero from '@/components/Sections/Hero'
+import { BlogGrid } from '@/components/Sections/BlogSection/BlogSection'
 
 export default async function Home() {
-
   return (
     <main className="home flex flex-col justify-center items-center">
       <Hero />
