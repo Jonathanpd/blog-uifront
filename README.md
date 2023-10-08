@@ -1,92 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Blog Ui & Front 👨‍💻🎨
 
-## Getting Started
+<div style="display:flex;gap:16px;">
+    <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDudXgGQG9jwA8n44U2HQDOXksM-g0M3TdvfaxtsenChqGGkDp_nUNJCI3V1FEfjvd8NRnRT2Ryrl0edwdE87mGfPxu=w1507-h913" alt="Google Page Speed" height="350">
+    <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDSFNWMZFmbb2J4Im-udrm380rIsoOFUP4hFtW5984GEEfJXD8-HLVjEUS1osulIDZhibhhPNqQ9o4U0OUxpsv2d_pxzQ=w1507-h913" alt="Google Page Speed" width="600">
+</div>
 
-First, run the development server:
+Bem-vindo ao **Blog Ui & Front**! Este é um espaço dedicado a explorar o emocionante mundo do **Ui Design** 👨‍🎨 e **Front-end Development** 👨‍💻. Nosso blog é altamente otimizado, alcançando a nota máxima no **Google PageSpeed** 🚀.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDvwhEShKkLmefUwbtB8n10Uueq-OZhovqNC6n1CCgN7JmdNdzNWL4ObHw09bmGHajSQbJNZeIVky2EkzmgFF4lXj2F8Q=w1507-h913" alt="Google Page Speed" width="600">
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tecnologias Utilizadas 🛠️
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Front-end 👨‍💻
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **[Next.js 13.5](https://nextjs.org/)**: Um framework React para aplicativos web modernos.
+- **[Shadcn Ui](https://shadcn-ui.com/)**: Lib de UI para criar interfaces elegantes e responsivas.
+- **[Tailwind CSS](https://tailwindcss.com/)**: Um framework CSS altamente personalizável e fácil de usar.
+- **[Radix UI](https://radix-ui.com/)**: Componentes acessíveis e elegantes para React.
+- **[App Router (Next.js 13.5)](https://nextjs.org/)**: Sistema de roteamento para Next.js.
 
-## Learn More
+### Ferramentas de Desenvolvimento 🧰
 
-To learn more about Next.js, take a look at the following resources:
+- **[Eslint](https://eslint.org/)**: Ferramenta de linting para identificar e corrigir problemas no código JavaScript.
+- **[Prettier](https://prettier.io/)**: Um formatador de código para manter um estilo de código consistente.
+- **[Husky](https://typicode.github.io/husky/)**: Hooks para Git para executar scripts automaticamente em determinados eventos do Git.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Testes e Qualidade de Código 🧪
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-# Blog Ui & Front
-
-Bem-vindo ao **Blog Ui & Front**! Este é um espaço dedicado a explorar o emocionante mundo do **Ui Design** e **Front-end Development**. Nosso blog é altamente otimizado, alcançando a nota máxima no **Google PageSpeed**.
-
-## Tecnologias Utilizadas
-
-### Front-end
-
-- **Next.js 13.5**: Um framework React para aplicativos web modernos.
-- **Shadcn Ui**: Lib de UI para criar interfaces elegantes e responsivas.
-- **Tailwind CSS**: Um framework CSS altamente personalizável e fácil de usar.
-- **Radix UI**: Componentes acessíveis e elegantes para React.
-- **App Router (Next.js 13.5)**: Sistema de roteamento para Next.js.
-
-### Ferramentas de Desenvolvimento
-
-- **Eslint**: Ferramenta de linting para identificar e corrigir problemas no código JavaScript.
-- **Prettier**: Um formatador de código para manter um estilo de código consistente.
-- **Husky**: Hooks para Git para executar scripts automaticamente em determinados eventos do Git.
-
-### Testes e Qualidade de Código
-
-- **Jest**: Um framework de teste de JavaScript com um foco na simplicidade.
-- **Testing Library**: Um conjunto de utilitários para testar componentes React de forma fácil e intuitiva.
+- **[Jest](https://jestjs.io/)**: Um framework de teste de JavaScript com um foco na simplicidade.
+- **[Testing Library](https://testing-library.com/)**: Um conjunto de utilitários para testar componentes React de forma fácil e intuitiva.
 - **Hooks para Testes**: Hooks personalizados para facilitar o teste de componentes React.
 
-### Desenvolvimento de Componentes
+### Desenvolvimento de Componentes 🚀
 
-- **Storybook 7**: Uma ferramenta para desenvolver UI de componentes isolados e reutilizáveis.
+- **[Storybook 7](https://storybook.js.org/)**: Uma ferramenta para desenvolver UI de componentes isolados e reutilizáveis.
 - **Integração do Storybook com Figma**: Visualize componentes do Storybook diretamente no Figma para um design mais colaborativo.
 
-### Automatização e Produtividade
+### Automatização e Produtividade 🚀
 
-- **Plop**: Uma ferramenta para criar rapidamente novos arquivos por meio de modelos predefinidos.
+- **[Plop](https://plopjs.com/)**: Uma ferramenta para criar rapidamente novos arquivos por meio de modelos predefinidos.
 
-### Integração Contínua
+### Integração Contínua | Deploy na Vercel 🚀
 
-- **Vercel**: Integração Contínua com deploy automático a cada push no GitHub.
+- **[Vercel](https://vercel.com/)**: Integração Contínua com deploy automático a cada push no GitHub.
+  [Next.js deployment documentation](https://nextjs.org/docs/deployment)
 
-### Design de Componentes
+### Design de Componentes 🎨
 
 - **Pattern de Composition**: Prática de design de componentes baseada na composição de funcionalidades.
 
-### Otimização de Desempenho
+### Otimização de Desempenho ⚡
 
 - **Cache do React/Next.js 13.5**: Otimização de desempenho com armazenamento em cache durante chamadas à API e serviços.
 
-### API Personalizada
+### API Personalizada 🌐
 
 - **REST API Personalizada (WP Headless)**: API RESTful personalizada desenvolvida utilizando WordPress Headless para fornecer dados ao projeto.
 
-## Como Contribuir
+## Como Contribuir 🤝
 
 1. Faça um fork do projeto
 2. Crie sua branch de feature (`git checkout -b feature/MinhaFeature`)
@@ -96,6 +67,30 @@ Bem-vindo ao **Blog Ui & Front**! Este é um espaço dedicado a explorar o emoci
 
 Sinta-se à vontade para explorar, fazer melhorias e contribuir para tornar este projeto ainda mais incrível!
 
-## Licença
+## Getting Started | Como iniciar o projeto:
+
+Primeiro, inicie o servidor de desenvolvimento:
+
+```bash
+npm install
+npm run dev
+```
+
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
+
+Você pode começar a editar a página modificando `app/page.tsx`. A página será atualizada automaticamente conforme você edita o arquivo.
+
+Este projeto utiliza [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) para otimizar e carregar automaticamente a fonte Inter, uma fonte personalizada do Google.
+
+## Saiba Mais
+
+Para aprender mais sobre o Next.js, confira os seguintes recursos:
+
+- [Documentação do Next.js](https://nextjs.org/docs) - saiba mais sobre os recursos e a API do Next.js.
+- [Aprenda Next.js](https://nextjs.org/learn) - um tutorial interativo do Next.js.
+
+Você também pode conferir [o repositório do Next.js no GitHub](https://github.com/vercel/next.js/)
+
+## Licença 📝
 
 Este projeto está licenciado sob a Licença [MIT](LICENSE).
