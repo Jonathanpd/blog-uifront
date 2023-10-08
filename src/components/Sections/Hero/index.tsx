@@ -2,9 +2,15 @@ import Link from 'next/link'
 
 type HeroProps = {
   className?: string
+  title?: string
+  description?: string
 }
 
-export default function Hero({ className }: HeroProps) {
+export default function Hero({
+  className,
+  title = 'Bem-vindo ao Blog Ui & Front',
+  description = 'Explore nossos artigos sobre elementos de interface, desde o UX / Ui Design até o desenvolvimento Front-end, para o sucesso do seu projeto.'
+}: HeroProps) {
   const combinedClassName = `bg-white ${className}`
 
   return (
@@ -33,15 +39,11 @@ export default function Hero({ className }: HeroProps) {
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Bem-vindo ao Blog
-              <br />
-              Ui & Front
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl max-w-xs md:max-w-xl mx-auto">
+              {title}
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Explore nossos artigos sobre elementos de interface, desde o UX /
-              Ui Design até o desenvolvimento Front-end, para o sucesso do seu
-              projeto.
+              {description}
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
