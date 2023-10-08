@@ -11,3 +11,11 @@ export default {
 } as Meta
 
 export const Default: StoryObj = {}
+
+export const Dark: StoryObj = {
+  args: {
+    className: 'invert',
+    title: 'title dark',
+    description: 'description dark'
+  }
+}
