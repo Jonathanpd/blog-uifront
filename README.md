@@ -1,13 +1,17 @@
 # Blog Ui & Front 👨‍💻🎨
 
-<div style="display:flex;gap:16px;">
+<div style="display:flex;gap:16px;flex-wrap: wrap;">
     <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDudXgGQG9jwA8n44U2HQDOXksM-g0M3TdvfaxtsenChqGGkDp_nUNJCI3V1FEfjvd8NRnRT2Ryrl0edwdE87mGfPxu=w1507-h913" alt="Google Page Speed" height="350">
     <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDSFNWMZFmbb2J4Im-udrm380rIsoOFUP4hFtW5984GEEfJXD8-HLVjEUS1osulIDZhibhhPNqQ9o4U0OUxpsv2d_pxzQ=w1507-h913" alt="Google Page Speed" width="600">
 </div>
 
 Bem-vindo ao **Blog Ui & Front**! Este é um espaço dedicado a explorar o emocionante mundo do **Ui Design** 👨‍🎨 e **Front-end Development** 👨‍💻. Nosso blog é altamente otimizado, alcançando a nota máxima no **Google PageSpeed** 🚀.
 
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDvwhEShKkLmefUwbtB8n10Uueq-OZhovqNC6n1CCgN7JmdNdzNWL4ObHw09bmGHajSQbJNZeIVky2EkzmgFF4lXj2F8Q=w1507-h913" alt="Google Page Speed" width="600">
+<div style="display:flex;gap:16px;flex-wrap: wrap;">
+<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaBSlJLgG2bGaUohs61Vi1qL4R6dd8XhJgx240bysNCv744bxM1PMp-UuO8DiJaLJlOF22OnBG699Y7QOPR5cU-V9y4h=w1108-h913" alt="Google Page Speed" width="400">
+
+<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDvwhEShKkLmefUwbtB8n10Uueq-OZhovqNC6n1CCgN7JmdNdzNWL4ObHw09bmGHajSQbJNZeIVky2EkzmgFF4lXj2F8Q=w1507-h913" alt="Google Page Speed" width="400">
+</div>
 
 ## 🛠️ Tecnologias Utilizadas 🛠️
 
