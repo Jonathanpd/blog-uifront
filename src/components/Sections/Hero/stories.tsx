@@ -4,7 +4,10 @@ import Hero from '.'
 
 export default {
   title: 'Sections/Hero',
-  component: Hero
+  component: Hero,
+  parameters: {
+    layout: 'fullscreen'
+  }
 } as Meta
 
 export const Default: StoryObj = {}
