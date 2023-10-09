@@ -32,14 +32,14 @@ Bem-vindo ao **Blog Ui & Front**! Este é um espaço dedicado a explorar o emoci
 
 ### Design Pattern e Componentes 🎨
 
-- **Composition**: Prática de design de componentes baseada na composição de componentes separando por funcionalidades.
+- **Composition**: Modelo de composição de componentes que são projetados para serem altamente flexíveis e customizáveis.
 - **Atomic design**: Metodologia que auxilia na categorização e padronização de elementos de interface, na criação de um Design System, Style Guides e documentações em geral.
 - **[Storybook 7](https://storybook.js.org/)**: Uma ferramenta para desenvolver UI de componentes isolados e reutilizáveis.
 - **Integração do Storybook com Figma**: Visualize componentes do Storybook diretamente no Figma para um design mais colaborativo.
 
 ### Automatização, Produtividade e Deploy 🚀
 
-- **[Plop](https://plopjs.com/)**: Uma ferramenta para criar rapidamente novos arquivos por meio de modelos predefinidos. No caso, criação de novos componetes.
+- **[Plop](https://plopjs.com/)**: Uma ferramenta para criar rapidamente novos arquivos por meio de modelos predefinidos. No caso, criação de novos componentes.
 - **[Vercel](https://vercel.com/)**: Integração Contínua com deploy automático a cada push no GitHub.
   [Next.js deployment documentation](https://nextjs.org/docs/deployment)
 
