@@ -34,7 +34,7 @@ Bem-vindo ao **Blog Ui & Front**! Este é um espaço dedicado a explorar o emoci
 
 - **Composition**: Modelo de composição de componentes que são projetados para serem altamente flexíveis e customizáveis.
 - **Atomic design**: Metodologia que auxilia na categorização e padronização de elementos de interface, na criação de um Design System, Style Guides e documentações em geral.
-- **[Storybook 7](https://storybook.js.org/)**: Uma ferramenta para desenvolver UI de componentes isolados e reutilizáveis.
+- **[Storybook 7](https://storybook.js.org/)**: Um workshop de front-end para a construção de componentes e páginas de UI isoladamente. Milhares de equipes o utilizam para desenvolvimento, testes e documentação de UI.
 - **Integração do Storybook com Figma**: Visualize componentes do Storybook diretamente no Figma para um design mais colaborativo.
 
 ### Automatização, Produtividade e Deploy 🚀
