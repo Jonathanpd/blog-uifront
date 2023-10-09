@@ -12,17 +12,17 @@ Bem-vindo ao **Blog Ui & Front**! Este é um espaço dedicado a explorar o emoci
 
 ### Front-end 👨‍💻
 
-- **[Next.js 13.5](https://nextjs.org/)**: Um framework React para aplicativos web modernos.
+- **[Next.js 13.5](https://nextjs.org/)**: Utilizamos o Next.js em sua versão mais atualizada.
 - **[Shadcn Ui](https://shadcn-ui.com/)**: Lib de UI para criar interfaces elegantes e responsivas.
 - **[Tailwind CSS](https://tailwindcss.com/)**: Um framework CSS altamente personalizável e fácil de usar.
 - **[Radix UI](https://radix-ui.com/)**: Componentes acessíveis e elegantes para React.
-- **[App Router (Next.js 13.5)](https://nextjs.org/)**: Sistema de roteamento para Next.js.
+- **[App Router (Next.js 13.5)](https://nextjs.org/)**: Novo paradigma para a construção de aplicativos usando os recursos mais recentes do React.
 
 ### Ferramentas de Desenvolvimento 🧰
 
 - **[Eslint](https://eslint.org/)**: Ferramenta de linting para identificar e corrigir problemas no código JavaScript.
 - **[Prettier](https://prettier.io/)**: Um formatador de código para manter um estilo de código consistente.
-- **[Husky](https://typicode.github.io/husky/)**: Hooks para Git para executar scripts automaticamente em determinados eventos do Git.
+- **[Husky e Lint-Staged](https://typicode.github.io/husky/)**: Hooks para executar scripts automaticamente em eventos do Git. Apenas para arquivos staged.
 
 ### Testes e Qualidade de Código 🧪
 
@@ -30,27 +30,22 @@ Bem-vindo ao **Blog Ui & Front**! Este é um espaço dedicado a explorar o emoci
 - **[Testing Library](https://testing-library.com/)**: Um conjunto de utilitários para testar componentes React de forma fácil e intuitiva.
 - **Hooks para Testes**: Hooks personalizados para facilitar o teste de componentes React.
 
-### Desenvolvimento de Componentes 🚀
+### Design Pattern e Componentes 🎨
 
+- **Composition**: Prática de design de componentes baseada na composição de componentes separando por funcionalidades.
+- **Atomic design**: Metodologia que auxilia na categorização e padronização de elementos de interface, na criação de um Design System, Style Guides e documentações em geral.
 - **[Storybook 7](https://storybook.js.org/)**: Uma ferramenta para desenvolver UI de componentes isolados e reutilizáveis.
 - **Integração do Storybook com Figma**: Visualize componentes do Storybook diretamente no Figma para um design mais colaborativo.
 
-### Automatização e Produtividade 🚀
+### Automatização, Produtividade e Deploy 🚀
 
-- **[Plop](https://plopjs.com/)**: Uma ferramenta para criar rapidamente novos arquivos por meio de modelos predefinidos.
-
-### Integração Contínua | Deploy na Vercel 🚀
-
+- **[Plop](https://plopjs.com/)**: Uma ferramenta para criar rapidamente novos arquivos por meio de modelos predefinidos. No caso, criação de novos componetes.
 - **[Vercel](https://vercel.com/)**: Integração Contínua com deploy automático a cada push no GitHub.
   [Next.js deployment documentation](https://nextjs.org/docs/deployment)
 
-### Design de Componentes 🎨
-
-- **Pattern de Composition**: Prática de design de componentes baseada na composição de funcionalidades.
-
 ### Otimização de Desempenho ⚡
 
-- **Cache do React/Next.js 13.5**: Otimização de desempenho com armazenamento em cache durante chamadas à API e serviços.
+- **Data Fetching, Caching, and Revalidating**: Otimização de desempenho com armazenamento em cache durante chamadas à API e serviços.
 
 ### API Personalizada 🌐
 
