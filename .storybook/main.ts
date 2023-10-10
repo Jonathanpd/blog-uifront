@@ -3,8 +3,10 @@ const config = {
   stories: ['../src/components/**/stories.tsx'],
   addons: [
     //'@storybook/addon-links',
-    '@storybook/addon-essentials'
-    //'@storybook/addon-interactions'
+    //'@storybook/addon-interactions',
+    //'@storybook/addon-postcss',
+    '@storybook/addon-essentials',
+    'storybook-tailwind-dark-mode'
   ],
   framework: {
     name: '@storybook/nextjs',

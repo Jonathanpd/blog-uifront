@@ -1,6 +1,6 @@
 'use client'
 
-import Image from 'next/image'
+import Logo from '@/components/Logo'
 import Link from 'next/link'
 
 const navigation = [
@@ -26,13 +26,7 @@ export default function Header({ className }: HeaderProps) {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Blog: UI & Front</span>
-            <Image
-              className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg"
-              alt=""
-              width={120}
-              height={120}
-            />
+            <Logo />
           </Link>
         </div>
         <div className="flex lg:hidden">

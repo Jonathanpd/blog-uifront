@@ -62,6 +62,7 @@
     "postcss": "latest",
     "prettier": "3.0.3",
     "storybook": "^7.4.6",
+    "storybook-tailwind-dark-mode": "^1.0.22",
     "tailwindcss": "latest",
     "typescript": "latest"
   }
