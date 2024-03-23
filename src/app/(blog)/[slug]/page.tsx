@@ -1,7 +1,9 @@
 import { baseApiUrl, getItem } from '@/services/get-items'
-import NavSinglePost from './_components/NavSinglePost'
-import Image from 'next/image'
-import { getSrc } from '@/utils/getSrc'
+// import NavSinglePost from './_components/NavSinglePost'
+// import Image from 'next/image'
+// import { getSrc } from '@/utils/getSrc'
+import { BlockRenderer } from '@/components/BlockRenderer'
+import { cleanAndTransformBlocks } from '@/utils/cleanAndTransformBlocks'
 
 export default async function Page({
   params: { slug }
@@ -10,8 +12,13 @@ export default async function Page({
 }) {
   const { post } = await getItem(slug)
 
+  const content = cleanAndTransformBlocks(post.content)
+  //console.log(post.content)
+
   return (
-    <article className="flex justify-center mt-16 lg:px-8 max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
+    <>
+      <BlockRenderer blocks={content} />
+      {/* <article className="flex justify-center mt-16 lg:px-8 max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
       <div className="flex flex-col min-h-screen w-[100%] max-w-[1400px] gap-8">
         <div className="max-w-2xl mx-auto w-full">
           <Image
@@ -143,7 +150,8 @@ export default async function Page({
           </div>
         </div>
       </div>
-    </article>
+    </article> */}
+    </>
   )
 }
 
