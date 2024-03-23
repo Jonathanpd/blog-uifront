@@ -1,9 +1,10 @@
 import { baseApiUrl, getItem } from '@/services/get-items'
-// import NavSinglePost from './_components/NavSinglePost'
-// import Image from 'next/image'
-// import { getSrc } from '@/utils/getSrc'
+import NavSinglePost from './_components/NavSinglePost'
+import Image from 'next/image'
+import { getSrc } from '@/utils/getSrc'
 import { BlockRenderer } from '@/components/BlockRenderer'
 import { cleanAndTransformBlocks } from '@/utils/cleanAndTransformBlocks'
+import { Heading } from '@/components/CoreBlocks/Heading'
 
 export default async function Page({
   params: { slug }
@@ -13,34 +14,48 @@ export default async function Page({
   const { post } = await getItem(slug)
 
   const content = cleanAndTransformBlocks(post.content)
-  //console.log(post.content)
 
   return (
     <>
-      <BlockRenderer blocks={content} />
-      {/* <article className="flex justify-center mt-16 lg:px-8 max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
-      <div className="flex flex-col min-h-screen w-[100%] max-w-[1400px] gap-8">
-        <div className="max-w-2xl mx-auto w-full">
-          <Image
-            src={getSrc(post.src)}
-            className="bg-indigo-500 bg-cover h-64 text-center overflow-hidden rounded-md object-cover"
-            alt="Imagem do Post"
-            width={1000}
-            height={400}
-          />
+      <article className="flex justify-center mt-16 lg:px-8 max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
+        <div className="flex flex-col min-h-screen w-[100%] max-w-[1400px] gap-8">
+          <div className="font-sans max-w-2xl mx-auto w-full mt-3 leading-normal">
+            <Image
+              src={getSrc(post.src)}
+              className="bg-indigo-500 bg-cover h-64 text-center overflow-hidden rounded-md object-cover"
+              alt="Imagem do Post"
+              width={1000}
+              height={400}
+            />
 
-          <div className="flex flex-col gap-4 justify-between items-start pt-4">
-            <NavSinglePost />
-            <div>
-              <span>Data: {post.date}</span>
-              <h1>Título: {post.title}</h1>
-              <div>
-                Conteúdo:
-                <div dangerouslySetInnerHTML={{ __html: post.content }} />
-              </div>
+            <div className="flex flex-col gap-4 justify-between items-start pt-4">
+              <NavSinglePost />
             </div>
-          </div>
 
+            <Heading
+              key={post.id}
+              content={post.title}
+              textAlign="left"
+              level={1}
+            />
+
+            <p className="text-gray-700 text-xs mt-2">
+              Autor:{' '}
+              <a
+                href="https://www.linkedin.com/in/jonathanpd/"
+                className="text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Jonathan S. S.
+              </a>
+            </p>
+
+            <BlockRenderer blocks={content} />
+          </div>
+        </div>
+      </article>
+      {/*
           <div className="mt-3 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
             <div className="font-sans">
               <a
@@ -68,50 +83,13 @@ export default async function Page({
                   Jonas
                 </a>
               </p>
-              <p className="text-base leading-8 my-5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industrys standard dummy text
-                ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p>
-              <h3 className="text-2xl font-bold my-5">
-                #1. What is Lorem Ipsum?
-              </h3>
-              <p className="text-base leading-8 my-5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industrys standard dummy text
-                ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p>
+              
               <blockquote className="border-l-4 text-base italic leading-8 my-5 p-5 text-indigo-600">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industrys standard dummy text
                 ever since the 1500s
               </blockquote>
-              <p className="text-base leading-8 my-5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industrys standard dummy text
-                ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p>
+              
               <a
                 href="#"
                 className="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
@@ -148,9 +126,7 @@ export default async function Page({
               </a>
             </div>
           </div>
-        </div>
-      </div>
-    </article> */}
+      */}
     </>
   )
 }
