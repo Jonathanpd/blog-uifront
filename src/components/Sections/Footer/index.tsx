@@ -31,7 +31,10 @@ export default function Footer({ className }: FooterProps) {
           </div>
 
           <div className="px-5 py-2">
-            <a href="#" className="text-base text-white">
+            <a
+              href="https://www.linkedin.com/in/jonathanpd/"
+              className="text-base text-white"
+            >
               Sobre mim
             </a>
           </div>
