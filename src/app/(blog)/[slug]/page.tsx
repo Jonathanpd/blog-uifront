@@ -1,5 +1,5 @@
 import { baseApiUrl, getItem } from '@/services/get-items'
-import NavSinglePost from './_components/NavSinglePost'
+//import NavSinglePost from './_components/NavSinglePost'
 import Image from 'next/image'
 import { getSrc } from '@/utils/getSrc'
 import { BlockRenderer } from '@/components/BlockRenderer'
@@ -17,9 +17,13 @@ export default async function Page({
 
   return (
     <>
-      <article className="flex justify-center mt-16 lg:px-8 max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
+      <article className="flex justify-center mt-16 lg:px-8 max-w-screen-xl mx-auto px-5 sm:p-10 md:px-16 relative">
         <div className="flex flex-col min-h-screen w-[100%] max-w-[1400px] gap-8">
           <div className="font-sans max-w-2xl mx-auto w-full mt-3 leading-normal">
+            {/* <div className="flex flex-col gap-4 justify-between items-start py-4">
+              <NavSinglePost />
+            </div> */}
+
             <Image
               src={getSrc(post.src)}
               className="bg-indigo-500 bg-cover h-64 text-center overflow-hidden rounded-md object-cover"
@@ -28,10 +32,6 @@ export default async function Page({
               height={400}
               priority={false}
             />
-
-            <div className="flex flex-col gap-4 justify-between items-start pt-4">
-              <NavSinglePost />
-            </div>
 
             <Heading
               key={post.id}
