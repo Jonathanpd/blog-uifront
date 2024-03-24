@@ -7,7 +7,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Blog', href: '/artigos' },
   { name: 'Tutoriais', href: '#' },
-  { name: 'Sobre mim', href: '#' }
+  { name: 'Sobre mim', href: 'https://www.linkedin.com/in/jonathanpd/' }
 ]
 
 type HeaderProps = {
