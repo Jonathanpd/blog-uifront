@@ -23,9 +23,10 @@ export default async function Page({
             <Image
               src={getSrc(post.src)}
               className="bg-indigo-500 bg-cover h-64 text-center overflow-hidden rounded-md object-cover"
-              alt="Imagem do Post"
+              alt={post.title}
               width={1000}
               height={400}
+              priority={false}
             />
 
             <div className="flex flex-col gap-4 justify-between items-start pt-4">
@@ -56,76 +57,58 @@ export default async function Page({
         </div>
       </article>
       {/*
-          <div className="mt-3 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
-            <div className="font-sans">
-              <a
-                href="#"
-                className="text-xs text-indigo-600 uppercase font-medium hover:text-gray-900 transition duration-500 ease-in-out"
-              >
-                Election
-              </a>
-              ,{' '}
-              <a
-                href="#"
-                className="text-xs text-indigo-600 uppercase font-medium hover:text-gray-900 transition duration-500 ease-in-out"
-              >
-                Politics
-              </a>
-              <h1 className="text-gray-900 font-bold text-3xl mb-2">
-                Revenge of the Super Man
-              </h1>
-              <p className="text-gray-700 text-xs mt-2">
-                Written By:{' '}
-                <a
-                  href="#"
-                  className="text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
-                >
-                  Jonas
-                </a>
-              </p>
-              
-              <blockquote className="border-l-4 text-base italic leading-8 my-5 p-5 text-indigo-600">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industrys standard dummy text
-                ever since the 1500s
-              </blockquote>
-              
-              <a
-                href="#"
-                className="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
-              >
-                #Election
-              </a>
-              ,{' '}
-              <a
-                href="#"
-                className="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
-              >
-                #people
-              </a>
-              ,{' '}
-              <a
-                href="#"
-                className="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
-              >
-                #Election2020
-              </a>
-              ,{' '}
-              <a
-                href="#"
-                className="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
-              >
-                #trump
-              </a>
-              ,
-              <a
-                href="#"
-                className="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
-              >
-                #Joe
-              </a>
-            </div>
-          </div>
+        <div className="font-sans">
+          <a
+            href="#"
+            className="text-xs text-indigo-600 uppercase font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+          >
+            Election
+          </a>
+          ,{' '}
+          <a
+            href="#"
+            className="text-xs text-indigo-600 uppercase font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+          >
+            Politics
+          </a>
+
+
+          
+          <a
+            href="#"
+            className="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+          >
+            #Election
+          </a>
+          ,{' '}
+          <a
+            href="#"
+            className="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+          >
+            #people
+          </a>
+          ,{' '}
+          <a
+            href="#"
+            className="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+          >
+            #Election2020
+          </a>
+          ,{' '}
+          <a
+            href="#"
+            className="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+          >
+            #trump
+          </a>
+          ,
+          <a
+            href="#"
+            className="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+          >
+            #Joe
+          </a>
+        </div>
       */}
     </>
   )

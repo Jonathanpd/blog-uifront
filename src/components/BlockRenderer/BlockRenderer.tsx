@@ -1,5 +1,6 @@
 import { Heading } from '../CoreBlocks/Heading'
 import { Paragraph } from '../CoreBlocks/Paragraph'
+import { Quote } from '../CoreBlocks/Quote'
 
 export const BlockRenderer = ({ blocks }) => {
   //console.log(blocks)
@@ -18,6 +19,14 @@ export const BlockRenderer = ({ blocks }) => {
       case 'core/paragraph':
         return (
           <Paragraph
+            key={block.id}
+            content={block.textContent}
+            textAlign={block.attrs.align}
+          />
+        )
+      case 'core/quote':
+        return (
+          <Quote
             key={block.id}
             content={block.textContent}
             textAlign={block.attrs.align}
