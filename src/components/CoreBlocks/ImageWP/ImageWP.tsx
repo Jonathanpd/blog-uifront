@@ -15,12 +15,12 @@ export const ImageWP = ({
     <Image
       alt={textAlt}
       src={getSrc(src)}
-      className={`image-wp overflow-hidden rounded-md object-cover my-5 p-5 ${getTextAlign(
+      className={`image-wp overflow-hidden rounded-md object-cover my-5 ${getTextAlign(
         textAlign
       )}`}
       width={width}
       height={height}
-      priority={false}
+      priority={true}
     />
   )
 }

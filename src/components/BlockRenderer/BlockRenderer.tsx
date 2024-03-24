@@ -2,6 +2,7 @@ import { Heading } from '../CoreBlocks/Heading'
 import { Paragraph } from '../CoreBlocks/Paragraph'
 import { Quote } from '../CoreBlocks/Quote'
 import { ImageWP } from '../CoreBlocks/ImageWP'
+import { List } from '../CoreBlocks/List'
 
 export const BlockRenderer = ({ blocks }) => {
   //console.log(blocks)
@@ -43,6 +44,10 @@ export const BlockRenderer = ({ blocks }) => {
             height={block.attrs.height}
             alt={block.alt}
           />
+        )
+      case 'core/list':
+        return (
+          <List key={block.id} innerBlocks={block.innerBlocks} block={block} />
         )
       default:
         return null
