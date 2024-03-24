@@ -4,17 +4,47 @@ import { Quote } from '../CoreBlocks/Quote'
 import { ImageWP } from '../CoreBlocks/ImageWP'
 import { List } from '../CoreBlocks/List'
 
-export const BlockRenderer = ({ blocks }) => {
-  //console.log(blocks)
+import { FC } from 'react'
 
+type BlockAttrs = Record<string, string | number | string[]>
+
+type Block = {
+  id: number
+  blockName: string | null
+  attrs: BlockAttrs
+  innerBlocks?: []
+  innerHTML: string
+  level: number | undefined
+  textContent: string
+  src: string | undefined
+  alt: string | undefined
+  listItems: string[]
+}
+
+type BlockRendererProps = {
+  blocks: Block[]
+}
+
+export const BlockRenderer: FC<BlockRendererProps> = ({ blocks }) => {
   return blocks.map((block) => {
+    const textAlign =
+      typeof block.attrs.textAlign === 'string'
+        ? block.attrs.textAlign
+        : undefined
+    const align =
+      typeof block.attrs.align === 'string' ? block.attrs.align : undefined
+    const width =
+      typeof block.attrs.width === 'number' ? block.attrs.width : undefined
+    const height =
+      typeof block.attrs.height === 'number' ? block.attrs.height : undefined
+
     switch (block.blockName) {
       case 'core/heading':
         return (
           <Heading
             key={block.id}
             content={block.textContent}
-            textAlign={block.attrs.textAlign}
+            textAlign={textAlign}
             level={block.level}
           />
         )
@@ -23,25 +53,21 @@ export const BlockRenderer = ({ blocks }) => {
           <Paragraph
             key={block.id}
             content={block.textContent}
-            textAlign={block.attrs.align}
+            textAlign={align}
           />
         )
       case 'core/quote':
         return (
-          <Quote
-            key={block.id}
-            content={block.textContent}
-            textAlign={block.attrs.align}
-          />
+          <Quote key={block.id} content={block.textContent} textAlign={align} />
         )
       case 'core/image':
         return (
           <ImageWP
             key={block.id}
             src={block.src}
-            textAlign={block.attrs.align}
-            width={block.attrs.width}
-            height={block.attrs.height}
+            textAlign={align}
+            width={width}
+            height={height}
             alt={block.alt}
           />
         )
