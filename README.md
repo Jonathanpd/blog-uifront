@@ -2,11 +2,7 @@
 
 Bem-vindo ao **Blog Ui & Front**! Este é um espaço dedicado a explorar o emocionante mundo do **Ui Design** 👨‍🎨 e **Front-end Development** 👨‍💻. Nosso blog é altamente otimizado, alcançando a nota máxima no **Google PageSpeed** 🚀.
 
-<div style="display:grid;gap:16px;grid-template-columns: 1fr 1fr;">
-  <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaBSlJLgG2bGaUohs61Vi1qL4R6dd8XhJgx240bysNCv744bxM1PMp-UuO8DiJaLJlOF22OnBG699Y7QOPR5cU-V9y4h=w1108-h913" alt="Google Page Speed" width="600">
-
-  <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDvwhEShKkLmefUwbtB8n10Uueq-OZhovqNC6n1CCgN7JmdNdzNWL4ObHw09bmGHajSQbJNZeIVky2EkzmgFF4lXj2F8Q=w1507-h913" alt="Google Page Speed" width="600">
-</div>
+**[Ver PageSpeed](https://pagespeed.web.dev/analysis/https-blog-uifront-com/xtdi6z1bvx?form_factor=mobile)**
 
 ## 🛠️ Tecnologias Utilizadas 🛠️
 
