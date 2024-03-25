@@ -5,25 +5,7 @@ import { ImageWP } from '../CoreBlocks/ImageWP'
 import { List } from '../CoreBlocks/List'
 
 import { FC } from 'react'
-
-type BlockAttrs = Record<string, string | number | string[]>
-
-type Block = {
-  id: number
-  blockName: string | null
-  attrs: BlockAttrs
-  innerBlocks?: []
-  innerHTML: string
-  level: number | undefined
-  textContent: string
-  src: string | undefined
-  alt: string | undefined
-  listItems: string[]
-}
-
-type BlockRendererProps = {
-  blocks: Block[]
-}
+import { BlockRendererProps } from '@/utils/types/blockTypes'
 
 export const BlockRenderer: FC<BlockRendererProps> = ({ blocks }) => {
   return blocks.map((block) => {
