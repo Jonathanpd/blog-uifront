@@ -1,11 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: [
-      'apiuifront.local',
-      'api.uifront.com',
-      'tailwindui.com',
-      'flowbite.com'
+    remotePatterns: [
+      {
+        hostname: 'apiuifront.local'
+      },
+      {
+        protocol: 'https',
+        hostname: 'api.uifront.com'
+      },
+      {
+        hostname: 'tailwindui.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'flowbite.com'
+      }
     ]
   }
 }
