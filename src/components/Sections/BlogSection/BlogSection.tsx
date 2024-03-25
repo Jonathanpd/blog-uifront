@@ -61,7 +61,7 @@ export async function BlogGrid({ className, maxPost }: BlogGridProps) {
           key={post.id}
           className={maxPost > 0 && index >= maxPost ? 'hidden' : ''}
         >
-          <Card className="h-[432px] flex flex-col justify-between max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-0">
+          <Card className="h-[532px] flex flex-col justify-between max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-0">
             <Link href={`/${post.slug}`}>
               <CardHeader className="p-0">
                 <Image
