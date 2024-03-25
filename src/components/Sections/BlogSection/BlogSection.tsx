@@ -41,8 +41,8 @@ export async function BlogGrid({ className, maxPost }: BlogGridProps) {
         </h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
           {/* Aprenda como expandir seus projetos com nossos conselhos especializados */}
-          Confira o que há de mais recente sobre elementos de interface, UX / UI
-          Design e desenvolvimento Front-end.
+          Confira o que há de mais interessante sobre elementos de interface, UX
+          / UI Design e desenvolvimento Front-end.
         </p>
 
         <Button
