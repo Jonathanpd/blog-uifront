@@ -12,11 +12,11 @@ Bem-vindo ao **Blog Ui & Front**! Este é um espaço dedicado a explorar o emoci
 
 ### Front-end 👨‍💻
 
-- **[Next.js 13.5](https://nextjs.org/)**: Utilizamos o Next.js em sua versão mais atualizada.
+- **[Next.js 14.1.4](https://nextjs.org/)**: Utilizamos o Next.js em sua versão mais atualizada.
 - **[Shadcn Ui](https://shadcn-ui.com/)**: Lib de UI para criar interfaces elegantes e responsivas.
 - **[Tailwind CSS](https://tailwindcss.com/)**: Um framework CSS altamente personalizável e fácil de usar.
 - **[Radix UI](https://radix-ui.com/)**: Componentes acessíveis e elegantes para React.
-- **[App Router (Next.js 13.5)](https://nextjs.org/)**: Novo paradigma para a construção de aplicativos usando os recursos mais recentes do React.
+- **[App Router (Next.js 14.1.4)](https://nextjs.org/)**: Novo paradigma para a construção de aplicativos usando os recursos mais recentes do React.
 
 ### Ferramentas de Desenvolvimento 🧰
 
@@ -34,7 +34,7 @@ Bem-vindo ao **Blog Ui & Front**! Este é um espaço dedicado a explorar o emoci
 
 - **Composition**: Modelo de composição de componentes que são projetados para serem altamente flexíveis e customizáveis.
 - **Atomic design**: Metodologia que auxilia na categorização e padronização de elementos de interface, na criação de um Design System, Style Guides e documentações em geral.
-- **[Storybook 7](https://storybook.js.org/)**: Um workshop de front-end para a construção de componentes e páginas de UI isoladamente. Milhares de equipes o utilizam para desenvolvimento, testes e documentação de UI.
+- **[Storybook 8](https://storybook.js.org/)**: Um workshop de front-end para a construção de componentes e páginas de UI isoladamente. Milhares de equipes o utilizam para desenvolvimento, testes e documentação de UI.
 - **Integração do Storybook com Figma**: Visualize componentes do Storybook diretamente no Figma para um design mais colaborativo.
 
 ### Automatização, Produtividade e Deploy 🚀
