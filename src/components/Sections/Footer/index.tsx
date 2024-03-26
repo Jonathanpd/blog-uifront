@@ -40,18 +40,25 @@ export default function Footer({ className }: FooterProps) {
           </div>
         </nav>
         <div className="mt-8 flex justify-center gap-x-6">
-          <a href="#" className="text-gray-400">
+          <a
+            href="https://www.linkedin.com/in/jonathanpd/"
+            className="text-gray-400"
+          >
             <span className="sr-only">Facebook</span>
-            <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                fillRule="evenodd"
-                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                clipRule="evenodd"
-              />
+            <svg
+              className="h-6 w-6"
+              viewBox="0 0 512 512"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm-74.390625 387h-62.347656v-187.574219h62.347656zm-31.171875-213.1875h-.40625c-20.921875 0-34.453125-14.402344-34.453125-32.402344 0-18.40625 13.945313-32.410156 35.273437-32.410156 21.328126 0 34.453126 14.003906 34.859376 32.410156 0 18-13.53125 32.402344-35.273438 32.402344zm255.984375 213.1875h-62.339844v-100.347656c0-25.21875-9.027343-42.417969-31.585937-42.417969-17.222656 0-27.480469 11.601563-31.988282 22.800781-1.648437 4.007813-2.050781 9.609375-2.050781 15.214844v104.75h-62.34375s.816407-169.976562 0-187.574219h62.34375v26.558594c8.285157-12.78125 23.109375-30.960937 56.1875-30.960937 41.019531 0 71.777344 26.808593 71.777344 84.421874zm0 0" />
             </svg>
           </a>
 
-          <a href="#" className="text-gray-400">
+          <a
+            href="https://www.instagram.com/jonathanproduzdigital/"
+            className="text-gray-400"
+          >
             <span className="sr-only">Instagram</span>
             <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -62,7 +69,10 @@ export default function Footer({ className }: FooterProps) {
             </svg>
           </a>
 
-          <a href="#" className="text-gray-400">
+          <a
+            href="https://github.com/Jonathanpd/blog-uifront"
+            className="text-gray-400"
+          >
             <span className="sr-only">GitHub</span>
             <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
               <path
