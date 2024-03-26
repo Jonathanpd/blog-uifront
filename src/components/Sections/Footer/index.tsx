@@ -84,7 +84,8 @@ export default function Footer({ className }: FooterProps) {
           </a>
         </div>
         <p className="mt-8 text-center text-base text-gray-400">
-          By Jonas | &copy; 2023 UI&Front. Todos os direitos reservados.
+          &copy; 2024 UI&Front. Todos os direitos reservados. | By Jonathan S.
+          S.
         </p>
       </div>
     </footer>
