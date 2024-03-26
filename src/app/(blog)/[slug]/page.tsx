@@ -30,7 +30,7 @@ export default async function Page({
               alt={post.title}
               width={1000}
               height={400}
-              priority={false}
+              priority={true}
             />
 
             <Heading

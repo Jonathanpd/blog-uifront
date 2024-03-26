@@ -47,7 +47,6 @@ export const BlockRenderer: FC<BlockRendererProps> = ({ blocks }) => {
           <ImageWP
             key={block.id}
             src={block.src}
-            textAlign={align}
             width={width}
             height={height}
             alt={block.alt}

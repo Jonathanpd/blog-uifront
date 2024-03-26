@@ -1,26 +1,32 @@
-import { getTextAlign } from '@/utils/fonts'
 import { getSrc } from '@/utils/getSrc'
 import Image from 'next/image'
 
 export const ImageWP = ({
-  textAlign = 'left',
   src = '',
   alt = '',
   width = 672,
   height = 672
+}: {
+  src?: string
+  alt?: string
+  width?: number | undefined
+  height?: number | undefined
 }) => {
   const textAlt = alt || 'Imagem Conteúdo'
-
   return (
-    <Image
-      alt={textAlt}
-      src={getSrc(src)}
-      className={`image-wp overflow-hidden rounded-md object-cover my-5 ${getTextAlign(
-        textAlign
-      )}`}
-      width={width}
-      height={height}
-      priority={true}
-    />
+    <div
+      className="overflow-hidden flex max-h-[400px] my-5"
+      style={{ maxWidth: `${width}px`, height: `${height}px` }}
+    >
+      <Image
+        alt={textAlt}
+        src={getSrc(src)}
+        className={`image-wp rounded-md object-cover w-full h-auto`}
+        width={0}
+        height={0}
+        sizes="100vw"
+        loading="lazy"
+      />
+    </div>
   )
 }
