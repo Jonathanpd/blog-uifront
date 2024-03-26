@@ -6,7 +6,7 @@ import Link from 'next/link'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Blog', href: '/artigos' },
-  { name: 'Tutoriais', href: '#' },
+  { name: 'Tutoriais', href: '/tutoriais' },
   { name: 'Sobre mim', href: 'https://www.linkedin.com/in/jonathanpd/' }
 ]
 
