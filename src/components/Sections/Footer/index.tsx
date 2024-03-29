@@ -13,7 +13,7 @@ export default function Footer({ className }: FooterProps) {
           aria-label="Footer"
         >
           <div className="px-5 py-2">
-            <a href="#" className="text-base text-white">
+            <a href="/" className="text-base text-white">
               Blog
             </a>
           </div>
