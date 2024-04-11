@@ -56,59 +56,60 @@ export async function BlogGrid({ className, maxPost }: BlogGridProps) {
         </Button>
       </div>
 
-      {items.map((post: Posts, index: number) => (
-        <article
-          key={post.id}
-          className={maxPost > 0 && index >= maxPost ? 'hidden' : ''}
-        >
-          <Card className="min-h-[532px] flex flex-col justify-between max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-0">
-            <Link href={`/${post.slug}`}>
-              <CardHeader className="p-0">
-                <Image
-                  className="rounded-t-lg h-52 object-cover"
-                  src={getSrc(post.src)}
-                  alt={post.title}
-                  width={500}
-                  height={240}
-                />
-              </CardHeader>
-              <CardContent className="py-4 max-w-full">
-                <CardTitle className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  {post.title}
-                </CardTitle>
+      {items.map((post: Posts, index: number) => {
+        const isPost = maxPost > 0 && index >= maxPost ? 'hidden' : ''
 
-                <CardDescription className="flex items-center gap-x-4 text-xs">
-                  <time dateTime={post.date} className="text-gray-500">
-                    {post.date}
-                  </time>
-                  <span className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
-                    UX / UI Design
-                  </span>
-                </CardDescription>
+        return (
+          <article key={post.id} className={`h-full ${isPost}`}>
+            <Card className="min-h-[532px] h-full flex flex-col justify-between max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-0">
+              <Link href={`/${post.slug}`}>
+                <CardHeader className="p-0">
+                  <Image
+                    className="rounded-t-lg h-52 object-cover"
+                    src={getSrc(post.src)}
+                    alt={post.title}
+                    width={500}
+                    height={240}
+                  />
+                </CardHeader>
+                <CardContent className="py-4 max-w-full">
+                  <CardTitle className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    {post.title}
+                  </CardTitle>
 
-                {/* <div 
-                                    className="max-h-11 overflow-hidden mb-3 font-normal text-gray-700 dark:text-gray-400" 
-                                    dangerouslySetInnerHTML={{ __html: post.content }}
-                                /> */}
+                  <CardDescription className="flex items-center gap-x-4 text-xs">
+                    <time dateTime={post.date} className="text-gray-500">
+                      {post.date}
+                    </time>
+                    <span className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                      UX / UI Design
+                    </span>
+                  </CardDescription>
 
-                <div className="max-h-11 max-w-full overflow-hidden mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  {post.excerpt}
-                </div>
-              </CardContent>
-            </Link>
-            <CardFooter>
-              <Button
-                className="bg-indigo-600 font-semibold shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                asChild
-              >
-                <Link href={`/${post.slug}`}>
-                  Ver Post <ChevronRightIcon className="h-4 w-4" />
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
-        </article>
-      ))}
+                  {/* <div 
+                                      className="max-h-11 overflow-hidden mb-3 font-normal text-gray-700 dark:text-gray-400" 
+                                      dangerouslySetInnerHTML={{ __html: post.content }}
+                                  /> */}
+
+                  <div className="max-h-11 max-w-full overflow-hidden mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    {post.excerpt}
+                  </div>
+                </CardContent>
+              </Link>
+              <CardFooter>
+                <Button
+                  className="bg-indigo-600 font-semibold shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  asChild
+                >
+                  <Link href={`/${post.slug}`}>
+                    Ver Post <ChevronRightIcon className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          </article>
+        )
+      })}
     </div>
   )
 }
