@@ -8,17 +8,17 @@ import { FC } from 'react'
 import { BlockRendererProps } from '@/utils/types/blockTypes'
 
 export const BlockRenderer: FC<BlockRendererProps> = ({ blocks }) => {
-  return blocks.map((block) => {
+  return blocks?.map((block) => {
     const textAlign =
-      typeof block.attrs.textAlign === 'string'
+      typeof block.attrs?.textAlign === 'string'
         ? block.attrs.textAlign
         : undefined
     const align =
-      typeof block.attrs.align === 'string' ? block.attrs.align : undefined
+      typeof block.attrs?.align === 'string' ? block.attrs.align : undefined
     const width =
-      typeof block.attrs.width === 'number' ? block.attrs.width : undefined
+      typeof block.attrs?.width === 'number' ? block.attrs.width : undefined
     const height =
-      typeof block.attrs.height === 'number' ? block.attrs.height : undefined
+      typeof block.attrs?.height === 'number' ? block.attrs.height : undefined
 
     switch (block.blockName) {
       case 'core/heading':

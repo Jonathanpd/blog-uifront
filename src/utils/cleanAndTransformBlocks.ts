@@ -19,8 +19,8 @@ export const cleanAndTransformBlocks = (blocksJSON: BlockJSON[]) => {
   const assignIds = (b: BlockProps[]) => {
     b.forEach((block) => {
       block.id = uuid()
-      if (block.innerBlocks?.length) {
-        assignIds(block.innerBlocks)
+      if (block?.innerBlocks?.length) {
+        assignIds(block?.innerBlocks)
       }
     })
   }

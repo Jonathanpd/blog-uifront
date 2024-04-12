@@ -13,7 +13,8 @@ export default async function Page({
 }) {
   const { post } = await getItem(slug)
 
-  const content = cleanAndTransformBlocks(post.content)
+  const content = cleanAndTransformBlocks(post?.content)
+  //const content = post?.content
 
   return (
     <>
@@ -25,17 +26,17 @@ export default async function Page({
             </div> */}
 
             <Image
-              src={getSrc(post.src)}
-              className="bg-indigo-500 bg-cover h-64 text-center overflow-hidden rounded-md object-cover"
-              alt={post.title}
+              src={getSrc(post?.src)}
+              className="bg-indigo-500 bg-cover h-80 text-center overflow-hidden rounded-md object-cover"
+              alt={post?.title}
               width={1000}
               height={400}
               priority={true}
             />
 
             <Heading
-              key={post.id}
-              content={post.title}
+              key={post?.id}
+              content={post?.title}
               textAlign="left"
               level={1}
             />
@@ -122,6 +123,6 @@ export async function generateStaticParams() {
   const posts = await fetch(`${baseApiUrl}/article`).then((res) => res.json())
 
   return posts.map((post: PostsInfo) => ({
-    slug: String(post.slug)
+    slug: String(post?.slug)
   }))
 }
