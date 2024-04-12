@@ -31,10 +31,11 @@ export const BlockRenderer: FC<BlockRendererProps> = ({ blocks }) => {
           />
         )
       case 'core/paragraph':
+        //console.log(block)
         return (
           <Paragraph
             key={block.id}
-            content={block.textContent}
+            content={block.innerHTML}
             textAlign={align}
           />
         )
@@ -53,9 +54,7 @@ export const BlockRenderer: FC<BlockRendererProps> = ({ blocks }) => {
           />
         )
       case 'core/list':
-        return (
-          <List key={block.id} innerBlocks={block.innerBlocks} block={block} />
-        )
+        return <List key={block.id} innerBlocks={block.innerBlocks} />
       default:
         return null
     }
