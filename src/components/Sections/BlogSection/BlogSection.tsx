@@ -83,18 +83,18 @@ export async function BlogGrid({ className, maxPost }: BlogGridProps) {
                       {post.date}
                     </time>
 
-                    <ul className="flex flex-wrap gap-2">
+                    <span className="flex flex-wrap gap-2">
                       {post.categories?.map((item) => {
                         return (
-                          <li
+                          <span
                             key={item}
                             className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
                           >
                             {item}
-                          </li>
+                          </span>
                         )
                       })}
-                    </ul>
+                    </span>
                   </CardDescription>
 
                   {/* <div 
