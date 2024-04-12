@@ -22,6 +22,7 @@ type Posts = {
   excerpt: string
   //content: HTMLElement;
   content: React.ReactNode
+  categories?: []
 }
 
 type BlogGridProps = {
@@ -77,13 +78,23 @@ export async function BlogGrid({ className, maxPost }: BlogGridProps) {
                     {post.title}
                   </CardTitle>
 
-                  <CardDescription className="flex items-center gap-x-4 text-xs">
+                  <CardDescription className="flex items-center gap-x-4 text-xs mb-2">
                     <time dateTime={post.date} className="text-gray-500">
                       {post.date}
                     </time>
-                    <span className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
-                      UX / UI Design
-                    </span>
+
+                    <ul className="flex flex-wrap gap-2">
+                      {post.categories?.map((item) => {
+                        return (
+                          <li
+                            key={item}
+                            className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                          >
+                            {item}
+                          </li>
+                        )
+                      })}
+                    </ul>
                   </CardDescription>
 
                   {/* <div 
