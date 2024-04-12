@@ -98,3 +98,8 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Estilização do conteúdo do blog */
+p a {
+  @apply text-blue-500;
+}
