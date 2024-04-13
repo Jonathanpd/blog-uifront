@@ -9,7 +9,7 @@ type HeroProps = {
 export default function Hero({
   className,
   title = 'Bem-vindo ao Blog Ui & Front!',
-  description = 'Descobra dicas práticas e insights valiosos sobre design de interfaces e desenvolvimento front-end, com ênfase em: estilo, funcionalidades e propósito.' //description = 'Descubra uma variedade de conteúdos em nosso blog, abrangendo desde os princípios do design UX/UI até o desenvolvimento Front-end, essenciais para impulsionar o sucesso do seu projeto. Explore agora!'
+  description = 'Descubra dicas práticas e insights valiosos sobre design de interfaces e desenvolvimento front-end, com ênfase em: estilo, funcionalidades e propósito.' //description = 'Descubra uma variedade de conteúdos em nosso blog, abrangendo desde os princípios do design UX/UI até o desenvolvimento Front-end, essenciais para impulsionar o sucesso do seu projeto. Explore agora!'
 }: HeroProps) {
   const combinedClassName = `bg-white ${className}`
 
